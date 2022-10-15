@@ -7,6 +7,20 @@
 
 import UIKit
 
+protocol BusinessLogic {
+    func presentInitialData()
+}
+
+final class OnboardingScreenInteractor {
+    var presenter: PresentationLogic?
+}
+
+extension OnboardingScreenInteractor: BusinessLogic {
+    func presentInitialData() {
+        presenter?.presentInitialData()
+    }
+}
+
 protocol OnboardingInteractorInput {
 }
 
@@ -34,3 +48,5 @@ final class OnboardingInteractor {
 
 extension OnboardingInteractor: OnboardingInteractorInput {
 }
+
+

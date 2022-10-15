@@ -11,6 +11,10 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
+protocol DisplayLogic: AnyObject {
+    func displayData()
+}
+
 final class OnboardingScreenViewController: BaseViewController {
     
     // MARK: - Outlets
@@ -139,9 +143,15 @@ extension OnboardingScreenViewController: UICollectionViewDataSource, UICollecti
     }
 }
 
-extension OnboardingScreenViewController: OnboardingPresentorOutput {
-    func displayData(pages: [PageModel]) {
-        pageControl.numberOfPages = pages.count
-        collectionView.reloadData()
+//extension OnboardingScreenViewController: OnboardingInteractorOutput {
+//    func displayData(pages: [PageModel]) {
+//        pageControl.numberOfPages = pages.count
+//        collectionView.reloadData()
+//    }
+//}
+
+extension OnboardingScreenViewController: DisplayLogic {
+    func displayData() {
+    
     }
 }
