@@ -8,7 +8,7 @@
 import Foundation
 
 protocol PresentationLogic {
-    func presentInitialData()
+    func presentInitialData(pages: [PageModel])
 }
 
 final class OnboardingScreenPresenter {
@@ -16,8 +16,7 @@ final class OnboardingScreenPresenter {
 }
 
 extension OnboardingScreenPresenter: PresentationLogic {
-    func presentInitialData() {
-        self.viewController?.displayData()
+    func presentInitialData(pages: [PageModel]) {
+        self.viewController?.displayData(pages: pages)
     }
 }
-

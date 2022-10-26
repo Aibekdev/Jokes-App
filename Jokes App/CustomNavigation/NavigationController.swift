@@ -31,7 +31,7 @@ final class OnboardingScreenNavigationController: CustomNavigationController {
     }
 }
 
-// MARK: - WelcomeScreenDelegate
+// MARK: - OnboardingScreenDelegate
 extension OnboardingScreenNavigationController: OnboardingScreenDelegate {
     
     func loadTypeofJokes() {

@@ -30,7 +30,7 @@ final class TypeOfJokesViewController: BaseViewController {
     
     private lazy var jokeHeaderView: TypeOfJokesHeaderView = {
         let view = TypeOfJokesHeaderView()
-        let header = TypeOfJokesHeaderModel.init(label: "Type of Jokes")
+        let header = TypeOfJokesHeaderModel.init(label: "Choose your joke genre")
                                          
         view.updateUI(model: header)
         return view

@@ -18,5 +18,6 @@ final class OnboardingRouter {
 
 extension OnboardingRouter: OnboardingRoutingLogic {
     func navigate() {
-        self.delegate?.loadTypeofJokes()    }
+        self.delegate?.loadTypeofJokes()
+    }
 }

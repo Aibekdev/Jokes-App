@@ -124,10 +124,10 @@
 			isa = PBXGroup;
 			children = (
 				A773E01D28F93AB3009EC31E /* TypeOfJokesViewController.swift */,
-				A773E01F28F93ACA009EC31E /* TypeOfJokesConfigurator.swift */,
-				A773E02128F93ADF009EC31E /* TypeOfJokesPresenter.swift */,
-				A773E02328F93AFD009EC31E /* TypeOfJokesRouter.swift */,
 				A773E02528F93B12009EC31E /* TypeOfJokesInteractor.swift */,
+				A773E02128F93ADF009EC31E /* TypeOfJokesPresenter.swift */,
+				A773E01F28F93ACA009EC31E /* TypeOfJokesConfigurator.swift */,
+				A773E02328F93AFD009EC31E /* TypeOfJokesRouter.swift */,
 			);
 			path = VIP;
 			sourceTree = "<group>";
@@ -238,10 +238,10 @@
 			isa = PBXGroup;
 			children = (
 				A7F90C1428EEAB7A00BC21D9 /* OnboardingScreenViewController.swift */,
-				A7F90C1628EEABA800BC21D9 /* OnboardingScreenConfigurator.swift */,
-				A7F90C1828EEABC800BC21D9 /* OnboardingScreenPresenter.swift */,
-				A7F90C1A28EEABE700BC21D9 /* OnboardingScreenRouter.swift */,
 				A7F90C1C28EEAC0200BC21D9 /* OnboardingScreenInteractor.swift */,
+				A7F90C1828EEABC800BC21D9 /* OnboardingScreenPresenter.swift */,
+				A7F90C1628EEABA800BC21D9 /* OnboardingScreenConfigurator.swift */,
+				A7F90C1A28EEABE700BC21D9 /* OnboardingScreenRouter.swift */,
 			);
 			path = VIP;
 			sourceTree = "<group>";

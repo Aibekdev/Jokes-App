@@ -13,7 +13,7 @@ class TypeOfJokesHeaderView: UIView {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
-        label.font = .systemFont(ofSize: 14)
+        label.font = .boldSystemFont(ofSize: 16)
         label.textColor = .black
         return label
     }()
@@ -42,7 +42,7 @@ class TypeOfJokesHeaderView: UIView {
     
     private func setUpConstraints() {
         titleLabel.snp.makeConstraints { maker in
-            maker.leading.equalToSuperview().inset(15)
+            maker.centerX.equalToSuperview()
             maker.centerY.equalToSuperview()
         }
         
