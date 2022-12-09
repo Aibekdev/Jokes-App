@@ -11,6 +11,10 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
+protocol DisplayLogic: AnyObject {
+    func displayData(pages: [PageModel])
+}
+
 final class OnboardingScreenViewController: BaseViewController {
     
     // MARK: - Outlets
@@ -27,17 +31,18 @@ final class OnboardingScreenViewController: BaseViewController {
         collectionView.register(PageCell.self, forCellWithReuseIdentifier: PageCell.className)
         return collectionView
     }()
-    
+
     private lazy var continueButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Next", for: .normal);    button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        button.setTitle("Next", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .customYellow
         button.layer.cornerRadius = 6
         button.addTarget(self, action: #selector(handleNext), for: .touchUpInside)
         return button
     }()
-    
+
     private lazy var pageControl: UIPageControl = {
         let pc = UIPageControl()
         pc.currentPage = 0
@@ -51,15 +56,15 @@ final class OnboardingScreenViewController: BaseViewController {
     
     // MARK: - Properties
     var router: OnboardingRoutingLogic?
-    var interactor: OnboardingInteractor?
+    var interactor: OnboardingScreenInteractor?
     
     // MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        self.view.backgroundColor = .white
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+
         addSubviews()
         setupLayouts()
     }
@@ -68,7 +73,7 @@ final class OnboardingScreenViewController: BaseViewController {
     private func addSubviews() {
         [collectionView, pageControl, continueButton].forEach { view.addSubview($0) }
     }
-    
+
     private func setupLayouts() {
         pageControl.snp.makeConstraints { maker in
             maker.centerX.equalToSuperview()
@@ -76,14 +81,14 @@ final class OnboardingScreenViewController: BaseViewController {
             maker.right.left.equalToSuperview()
             maker.bottom.equalToSuperview().inset(160)
         }
-        
+
         continueButton.snp.makeConstraints { maker in
             maker.centerX.equalToSuperview()
             maker.height.equalTo(60)
             maker.width.equalTo(345)
             maker.bottom.equalToSuperview().inset(57)
         }
-        
+
         collectionView.snp.makeConstraints { maker in
             maker.top.equalToSuperview().inset(88)
             maker.left.right.equalToSuperview()
@@ -96,11 +101,12 @@ final class OnboardingScreenViewController: BaseViewController {
 extension OnboardingScreenViewController {
     @objc private func handleNext() {
         let currentPage = pageControl.currentPage
+        if currentPage == 2 { router?.navigate() }
         let pagesCount = interactor?.pages.count ?? .zero
         let nextIndex = min(currentPage + 1, pagesCount - 1)
         executeNext(nextIndex: nextIndex)
     }
-    
+
     private func executeNext(nextIndex: Int) {
         let indexPath = IndexPath(item: nextIndex, section: 0)
         pageControl.currentPage = nextIndex
@@ -109,10 +115,9 @@ extension OnboardingScreenViewController {
                                     at: .left,
                                     animated: true)
         collectionView.isPagingEnabled = true
-        
+
         let title = nextIndex == 2 ? "Start" : "Next"
-        
-        continueButton.setTitle(title, for: .normal);
+        continueButton.setTitle(title, for: .normal)
     }
 }
 
@@ -130,7 +135,7 @@ extension OnboardingScreenViewController: UICollectionViewDataSource, UICollecti
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return interactor?.pages.count ?? 0
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PageCell.className, for: indexPath) as! PageCell
         guard let page = interactor?.pages[indexPath.row] else { return cell }
@@ -139,7 +144,7 @@ extension OnboardingScreenViewController: UICollectionViewDataSource, UICollecti
     }
 }
 
-extension OnboardingScreenViewController: OnboardingPresentorOutput {
+extension OnboardingScreenViewController: DisplayLogic {
     func displayData(pages: [PageModel]) {
         pageControl.numberOfPages = pages.count
         collectionView.reloadData()

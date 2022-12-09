@@ -12,9 +12,12 @@ protocol OnboardingRoutingLogic: AnyObject {
 }
 
 final class OnboardingRouter {
+    weak var viewController: DisplayLogic?
+    weak var delegate: OnboardingScreenDelegate?
 }
 
 extension OnboardingRouter: OnboardingRoutingLogic {
     func navigate() {
+        self.delegate?.loadTypeofJokes()
     }
 }

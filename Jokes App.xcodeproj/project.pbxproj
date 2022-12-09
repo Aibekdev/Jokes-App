@@ -8,8 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		38B8383C9F32937B463D7DC4 /* Pods_Jokes_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3133E7CB03A01188BFB38A4 /* Pods_Jokes_App.framework */; };
+		A773E01528F9397C009EC31E /* TypeOfJokesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E01428F9397C009EC31E /* TypeOfJokesModel.swift */; };
+		A773E01728F939B3009EC31E /* TypeOfJokesHeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E01628F939B3009EC31E /* TypeOfJokesHeaderModel.swift */; };
+		A773E01928F939EC009EC31E /* TypeOfJokesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E01828F939EC009EC31E /* TypeOfJokesCell.swift */; };
+		A773E01B28F93A14009EC31E /* TypeOfJokesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E01A28F93A14009EC31E /* TypeOfJokesHeaderView.swift */; };
+		A773E01E28F93AB3009EC31E /* TypeOfJokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E01D28F93AB3009EC31E /* TypeOfJokesViewController.swift */; };
+		A773E02028F93ACA009EC31E /* TypeOfJokesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E01F28F93ACA009EC31E /* TypeOfJokesConfigurator.swift */; };
+		A773E02228F93ADF009EC31E /* TypeOfJokesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E02128F93ADF009EC31E /* TypeOfJokesPresenter.swift */; };
+		A773E02428F93AFD009EC31E /* TypeOfJokesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E02328F93AFD009EC31E /* TypeOfJokesRouter.swift */; };
+		A773E02628F93B12009EC31E /* TypeOfJokesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E02528F93B12009EC31E /* TypeOfJokesInteractor.swift */; };
+		A773E02828F9852F009EC31E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E02728F9852F009EC31E /* NavigationController.swift */; };
 		A7AEBCB528E1817900217D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AEBCB428E1817900217D38 /* AppDelegate.swift */; };
-		A7AEBCB728E1817900217D38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AEBCB628E1817900217D38 /* SceneDelegate.swift */; };
 		A7AEBCB928E1817900217D38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AEBCB828E1817900217D38 /* ViewController.swift */; };
 		A7AEBCBE28E1817C00217D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7AEBCBD28E1817C00217D38 /* Assets.xcassets */; };
 		A7AEBCC128E1817C00217D38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7AEBCBF28E1817C00217D38 /* LaunchScreen.storyboard */; };
@@ -32,9 +41,18 @@
 		08725EC061532B5E7217E473 /* Pods-Jokes App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jokes App.debug.xcconfig"; path = "Target Support Files/Pods-Jokes App/Pods-Jokes App.debug.xcconfig"; sourceTree = "<group>"; };
 		41065B122824DC42C26BE4FB /* Pods-Jokes App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jokes App.release.xcconfig"; path = "Target Support Files/Pods-Jokes App/Pods-Jokes App.release.xcconfig"; sourceTree = "<group>"; };
 		A3133E7CB03A01188BFB38A4 /* Pods_Jokes_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jokes_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A773E01428F9397C009EC31E /* TypeOfJokesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfJokesModel.swift; sourceTree = "<group>"; };
+		A773E01628F939B3009EC31E /* TypeOfJokesHeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfJokesHeaderModel.swift; sourceTree = "<group>"; };
+		A773E01828F939EC009EC31E /* TypeOfJokesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfJokesCell.swift; sourceTree = "<group>"; };
+		A773E01A28F93A14009EC31E /* TypeOfJokesHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfJokesHeaderView.swift; sourceTree = "<group>"; };
+		A773E01D28F93AB3009EC31E /* TypeOfJokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfJokesViewController.swift; sourceTree = "<group>"; };
+		A773E01F28F93ACA009EC31E /* TypeOfJokesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfJokesConfigurator.swift; sourceTree = "<group>"; };
+		A773E02128F93ADF009EC31E /* TypeOfJokesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfJokesPresenter.swift; sourceTree = "<group>"; };
+		A773E02328F93AFD009EC31E /* TypeOfJokesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfJokesRouter.swift; sourceTree = "<group>"; };
+		A773E02528F93B12009EC31E /* TypeOfJokesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfJokesInteractor.swift; sourceTree = "<group>"; };
+		A773E02728F9852F009EC31E /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		A7AEBCB128E1817900217D38 /* Jokes App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jokes App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7AEBCB428E1817900217D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A7AEBCB628E1817900217D38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A7AEBCB828E1817900217D38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A7AEBCBD28E1817C00217D38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7AEBCC028E1817C00217D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,6 +93,45 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A773E01028F93769009EC31E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A7F90C1328EEAB4300BC21D9 /* OnboardingScreen */,
+				A7F90C0328E30C0300BC21D9 /* TypeOfJokes */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A773E01128F93949009EC31E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A773E01428F9397C009EC31E /* TypeOfJokesModel.swift */,
+				A773E01628F939B3009EC31E /* TypeOfJokesHeaderModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A773E01228F9394E009EC31E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A773E01828F939EC009EC31E /* TypeOfJokesCell.swift */,
+				A773E01A28F93A14009EC31E /* TypeOfJokesHeaderView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A773E01328F93958009EC31E /* VIP */ = {
+			isa = PBXGroup;
+			children = (
+				A773E01D28F93AB3009EC31E /* TypeOfJokesViewController.swift */,
+				A773E02528F93B12009EC31E /* TypeOfJokesInteractor.swift */,
+				A773E02128F93ADF009EC31E /* TypeOfJokesPresenter.swift */,
+				A773E01F28F93ACA009EC31E /* TypeOfJokesConfigurator.swift */,
+				A773E02328F93AFD009EC31E /* TypeOfJokesRouter.swift */,
+			);
+			path = VIP;
+			sourceTree = "<group>";
+		};
 		A7AEBCA828E1817900217D38 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +156,8 @@
 				A7F90C2E28EEB86C00BC21D9 /* Extensions */,
 				A7F90C2A28EEB75600BC21D9 /* General */,
 				A7F90C2228EEACB000BC21D9 /* CustomNavigation */,
-				A7F90C1328EEAB4300BC21D9 /* OnboardingScreen */,
+				A773E01028F93769009EC31E /* Scenes */,
 				A7F90C0428E31B3600BC21D9 /* API */,
-				A7F90C0328E30C0300BC21D9 /* TableView */,
 				A7F90BFF28E309D800BC21D9 /* Application */,
 				A7F90C0228E30A7C00BC21D9 /* Core */,
 				A7AEBCB828E1817900217D38 /* ViewController.swift */,
@@ -114,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				A7AEBCB428E1817900217D38 /* AppDelegate.swift */,
-				A7AEBCB628E1817900217D38 /* SceneDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -136,11 +191,14 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		A7F90C0328E30C0300BC21D9 /* TableView */ = {
+		A7F90C0328E30C0300BC21D9 /* TypeOfJokes */ = {
 			isa = PBXGroup;
 			children = (
+				A773E01228F9394E009EC31E /* Cells */,
+				A773E01128F93949009EC31E /* Model */,
+				A773E01328F93958009EC31E /* VIP */,
 			);
-			path = TableView;
+			path = TypeOfJokes;
 			sourceTree = "<group>";
 		};
 		A7F90C0428E31B3600BC21D9 /* API */ = {
@@ -180,10 +238,10 @@
 			isa = PBXGroup;
 			children = (
 				A7F90C1428EEAB7A00BC21D9 /* OnboardingScreenViewController.swift */,
-				A7F90C1628EEABA800BC21D9 /* OnboardingScreenConfigurator.swift */,
-				A7F90C1828EEABC800BC21D9 /* OnboardingScreenPresenter.swift */,
-				A7F90C1A28EEABE700BC21D9 /* OnboardingScreenRouter.swift */,
 				A7F90C1C28EEAC0200BC21D9 /* OnboardingScreenInteractor.swift */,
+				A7F90C1828EEABC800BC21D9 /* OnboardingScreenPresenter.swift */,
+				A7F90C1628EEABA800BC21D9 /* OnboardingScreenConfigurator.swift */,
+				A7F90C1A28EEABE700BC21D9 /* OnboardingScreenRouter.swift */,
 			);
 			path = VIP;
 			sourceTree = "<group>";
@@ -201,6 +259,7 @@
 			children = (
 				A7F90C2328EEACCE00BC21D9 /* BaseViewController.swift */,
 				A7F90C2528EEACF000BC21D9 /* CustomNavigationController.swift */,
+				A773E02728F9852F009EC31E /* NavigationController.swift */,
 			);
 			path = CustomNavigation;
 			sourceTree = "<group>";
@@ -364,18 +423,27 @@
 				A7AEBCB928E1817900217D38 /* ViewController.swift in Sources */,
 				A7F90C1D28EEAC0200BC21D9 /* OnboardingScreenInteractor.swift in Sources */,
 				A7F90C3228EEB9E100BC21D9 /* UIView+Constraints.swift in Sources */,
+				A773E01528F9397C009EC31E /* TypeOfJokesModel.swift in Sources */,
 				A7AEBCB528E1817900217D38 /* AppDelegate.swift in Sources */,
 				A7F90C2C28EEB76600BC21D9 /* BaseConfigurator.swift in Sources */,
-				A7AEBCB728E1817900217D38 /* SceneDelegate.swift in Sources */,
+				A773E02828F9852F009EC31E /* NavigationController.swift in Sources */,
+				A773E01928F939EC009EC31E /* TypeOfJokesCell.swift in Sources */,
 				A7F90C3028EEB88600BC21D9 /* UIKit extensions.swift in Sources */,
+				A773E01B28F93A14009EC31E /* TypeOfJokesHeaderView.swift in Sources */,
+				A773E02628F93B12009EC31E /* TypeOfJokesInteractor.swift in Sources */,
 				A7F90C1B28EEABE700BC21D9 /* OnboardingScreenRouter.swift in Sources */,
 				A7F90C1728EEABA800BC21D9 /* OnboardingScreenConfigurator.swift in Sources */,
 				A7F90C3428EECE2F00BC21D9 /* UIColors.swift in Sources */,
 				A7F90C2128EEAC8200BC21D9 /* OnboardingScreenModel.swift in Sources */,
 				A7F90C2928EEAFBF00BC21D9 /* OnboardingScreenPageCell.swift in Sources */,
 				A7F90C1928EEABC800BC21D9 /* OnboardingScreenPresenter.swift in Sources */,
+				A773E02028F93ACA009EC31E /* TypeOfJokesConfigurator.swift in Sources */,
+				A773E01728F939B3009EC31E /* TypeOfJokesHeaderModel.swift in Sources */,
+				A773E01E28F93AB3009EC31E /* TypeOfJokesViewController.swift in Sources */,
 				A7F90C2428EEACCE00BC21D9 /* BaseViewController.swift in Sources */,
 				A7F90C2628EEACF000BC21D9 /* CustomNavigationController.swift in Sources */,
+				A773E02228F93ADF009EC31E /* TypeOfJokesPresenter.swift in Sources */,
+				A773E02428F93AFD009EC31E /* TypeOfJokesRouter.swift in Sources */,
 				A7F90C1528EEAB7A00BC21D9 /* OnboardingScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
